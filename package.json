@@ -1,0 +1,24 @@
+{
+  "name": "douyin_video",
+  "version": "0.0.1",
+  "description": "Parse the video of douyin.",
+  "main": "index.js",
+  "bin": {
+    "dyd": "bin/dyd.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "douyin"
+  ],
+  "author": "xyz-studio",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xyz-studio/Douyin_Video.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}

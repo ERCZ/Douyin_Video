@@ -1,0 +1,21 @@
+const fs = require('fs')
+const DouyinVideo = require('./index')
+
+async function run() {
+    let video = new DouyinVideo('https://v.douyin.com/Jj8eXXu/')
+    await video.parse()
+    console.log(video.videoID)
+    console.log(video.videoTitle)
+    console.log(video.videoDesc)
+    console.log(video.videoDuration)
+    console.log(video.videoCoverUrl)
+    console.log(video.videoHeight)
+    console.log(video.videoWidth)
+    console.log(video.videoUrl)
+    console.log(video.videoNoWaterMaskUrl)
+    console.log(video.bgMusicUrl)
+    let data = await video.downloadAudio()
+    let file = fs.createWriteStream(`${video.videoID}.mp3`)
+    data.pipe(file)
+}
+run()
